@@ -3,11 +3,13 @@ from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from base_renderer import BaseRenderer
+from weather_service.weather_service import WeatherService
+
 
 
 class OpenGLRenderer(BaseRenderer):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, weather_service=None):
+        super().__init__(weather_service)
         self.rotation_x = 0.0
         self.rotation_y = 0.0
         self.scale = 1.0
@@ -227,7 +229,7 @@ def main():
     pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
     pygame.display.set_caption("Cube")
 
-    renderer = OpenGLRenderer()
+    renderer = OpenGLRenderer(WeatherService())
     renderer.init_gl()
 
     try:
@@ -246,6 +248,8 @@ def main():
         print(f"Error in main loop: {e}")
     finally:
         pygame.quit()
+        if hasattr(renderer.weather_service, 'close'):
+            renderer.weather_service.close()
 
 
 if __name__ == "__main__":
