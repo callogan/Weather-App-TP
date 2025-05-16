@@ -1,0 +1,16 @@
+certifi==2025.4.26
+charset-normalizer==3.4.2
+idna==3.10
+numpy==1.26.3
+pygame==2.5.2
+PyOpenGL @ file:///C:/Users/Ruslan/PycharmProjects/PythonProject/test_assigments/Weather_App_TP/united_graph_elements/PyOpenGL-3.1.9-cp312-cp312-win_amd64.whl#sha256=21af35700611eafdf47ddd8c53453821e7dc327f0217eb7dc14715cf9f07f486
+PyOpenGL-accelerate==3.1.9
+PyOpenGL-Demo==3.1.1
+PySide6==6.9.0
+PySide6_Addons==6.9.0
+PySide6_Essentials==6.9.0
+python-dotenv==1.0.0
+requests==2.32.0
+shiboken6==6.9.0
+six==1.17.0
+urllib3==2.4.0
