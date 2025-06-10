@@ -56,6 +56,6 @@ python main_weather_service.py
 ```
 This mode allows you to:
 
-- View current weather for a selected city
-- Get information about temperature and other parameters
+- View current weather for a selected city;
+- Get information about temperature and other parameters;
 - Update data manually.
